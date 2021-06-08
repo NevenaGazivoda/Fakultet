@@ -49,10 +49,6 @@ namespace FakultetAPI.Controllers
 
                     pList.Add(prof);
                 }
-                for (int i = 0; i < pList.Count; i++)
-                {
-                    Console.WriteLine((i + 1) + ". " + pList[i].ToString());
-                }
                 reader.Close();
                 db.Close();
             }
