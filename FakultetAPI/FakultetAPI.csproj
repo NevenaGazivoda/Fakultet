@@ -157,11 +157,13 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Connection.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PredmetiController.cs" />
     <Compile Include="Controllers\ProfesoriController.cs" />
     <Compile Include="Controllers\StudentiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Predmet.cs" />
     <Compile Include="Models\Profesor.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
