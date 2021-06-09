@@ -97,6 +97,84 @@ namespace FakultetAPI.Controllers
             }
             return pr;
         }
+        
+        [Route("POST")]
+        [HttpPost]
+        public void Unos(Predmet p)
+        {
 
+            SqlCommand command = new SqlCommand("insertIntoPredmeti", db)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            command.Parameters.Add("@Naziv", SqlDbType.VarChar).Value = p.Naziv;
+            command.Parameters.Add("@Godina", SqlDbType.Int).Value = p.Godina;
+            command.Parameters.Add("@ProfesorId", SqlDbType.Int).Value = p.FKProfesorId;
+
+            try
+            {
+                db.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            db.Close();
+        }
+        
+        [Route("PUT")]
+        [HttpPut]
+        public void Izmjena(Predmet p)
+        {
+            SqlCommand command = new SqlCommand("updateToPredmeti", db)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            
+            command.Parameters.Add("@Naziv", SqlDbType.VarChar).Value = p.Naziv;
+            command.Parameters.Add("@Godina", SqlDbType.Int).Value = p.Godina;
+            command.Parameters.Add("@ProfesorId", SqlDbType.Int).Value = p.FKProfesorId;
+            command.Parameters.Add("@IdPredmeta", SqlDbType.Int).Value = p.PKPredmetId;
+
+
+            try
+            {
+                db.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            db.Close();
+        }
+
+        [Route("DELETE/{idPredmeta}")]
+        [HttpDelete]
+        public void Brisanje(int idPredmeta)
+        {
+            SqlCommand command = new SqlCommand("deleteFromPredmeti", db)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            command.Parameters.Add("@IdPredmeta", SqlDbType.Int).Value = idPredmeta;
+
+            try
+            {
+                db.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            db.Close();
+        }
     }
 }

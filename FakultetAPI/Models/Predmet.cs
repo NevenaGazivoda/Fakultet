@@ -10,6 +10,7 @@ namespace FakultetAPI.Models
         public int PKPredmetId { get; set; }
         public string Naziv { get; set; }
         public int Godina { get; set; }
+        public int FKProfesorId { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
     }
