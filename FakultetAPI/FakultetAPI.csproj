@@ -167,6 +167,7 @@
     <Compile Include="Controllers\PredmetiController.cs" />
     <Compile Include="Controllers\PredmetisController.cs" />
     <Compile Include="Controllers\ProfesoriController.cs" />
+    <Compile Include="Controllers\ProfesorisController.cs" />
     <Compile Include="Controllers\StudentiController.cs" />
     <Compile Include="Controllers\StudentisController.cs" />
     <Compile Include="Global.asax.cs">
@@ -308,6 +309,11 @@
     <Content Include="Views\Predmetis\Details.cshtml" />
     <Content Include="Views\Predmetis\Edit.cshtml" />
     <Content Include="Views\Predmetis\Index.cshtml" />
+    <Content Include="Views\Profesoris\Create.cshtml" />
+    <Content Include="Views\Profesoris\Delete.cshtml" />
+    <Content Include="Views\Profesoris\Details.cshtml" />
+    <Content Include="Views\Profesoris\Edit.cshtml" />
+    <Content Include="Views\Profesoris\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
