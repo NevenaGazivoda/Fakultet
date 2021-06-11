@@ -1,0 +1,52 @@
+﻿@model IEnumerable<FakultetAPI.ModelEF.StudentiPredmeti>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Ime i prezime studenta")
+           
+        </th>
+        
+        <th>
+            @Html.DisplayName("Naziv predmeta")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ocjena)
+
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Studenti.Ime)
+            @Html.DisplayFor(modelItem => item.Studenti.Prezime)
+            
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Predmeti.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ocjena)
+           
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PKStudPredId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PKStudPredId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PKStudPredId })
+        </td>
+    </tr>
+}
+
+</table>

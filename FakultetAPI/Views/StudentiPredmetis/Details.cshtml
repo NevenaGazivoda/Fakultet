@@ -1,0 +1,50 @@
+﻿@model FakultetAPI.ModelEF.StudentiPredmeti
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentiPredmeti</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ocjena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ocjena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Predmeti.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predmeti.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Studenti.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Studenti.Ime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PKStudPredId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

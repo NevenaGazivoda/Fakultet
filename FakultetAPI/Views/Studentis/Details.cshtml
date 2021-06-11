@@ -33,8 +33,30 @@
         <dd>
             @Html.DisplayFor(model => model.BrIndexa)
         </dd>
+       
+        </dl>
+    <table class="table">
 
-    </dl>
+        <tr>
+            <th>
+                @Html.DisplayName("Naziv predmeta")
+            </th>
+            <th>
+                @Html.DisplayName("Ocjena")
+            </th>
+        </tr>
+        @foreach (var item in Model.StudentiPredmetis)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Predmeti.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ocjena)
+            </td>
+        </tr>
+        }
+        </table>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PKStudentId }) |

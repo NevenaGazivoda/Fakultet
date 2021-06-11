@@ -169,6 +169,7 @@
     <Compile Include="Controllers\ProfesoriController.cs" />
     <Compile Include="Controllers\ProfesorisController.cs" />
     <Compile Include="Controllers\StudentiController.cs" />
+    <Compile Include="Controllers\StudentiPredmetisController.cs" />
     <Compile Include="Controllers\StudentisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -314,6 +315,11 @@
     <Content Include="Views\Profesoris\Details.cshtml" />
     <Content Include="Views\Profesoris\Edit.cshtml" />
     <Content Include="Views\Profesoris\Index.cshtml" />
+    <Content Include="Views\StudentiPredmetis\Create.cshtml" />
+    <Content Include="Views\StudentiPredmetis\Delete.cshtml" />
+    <Content Include="Views\StudentiPredmetis\Details.cshtml" />
+    <Content Include="Views\StudentiPredmetis\Edit.cshtml" />
+    <Content Include="Views\StudentiPredmetis\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

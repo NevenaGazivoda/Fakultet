@@ -1,0 +1,56 @@
+﻿@model FakultetAPI.ModelEF.StudentiPredmeti
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StudentiPredmeti</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ocjena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ocjena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Predmeti.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predmeti.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Studenti.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Studenti.Ime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
