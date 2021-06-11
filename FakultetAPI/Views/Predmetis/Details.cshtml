@@ -1,0 +1,42 @@
+﻿@model FakultetAPI.ModelEF.Predmeti
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Predmeti</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Godina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Godina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profesori.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profesori.Ime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PKPredmetId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
