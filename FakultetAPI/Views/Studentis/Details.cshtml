@@ -35,7 +35,7 @@
         </dd>
        
         </dl>
-    <table class="table">
+    @*<table class="table">
 
         <tr>
             <th>
@@ -49,14 +49,17 @@
         {
         <tr>
             <td>
-                @Html.DisplayFor(model => item.Predmeti.Naziv)
+                @item.Predmeti.Naziv
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Ocjena)
             </td>
         </tr>
         }
-        </table>
+        </table>*@
+</div>
+<div>
+    @Html.Action("OcjeneStudenta", "StudentiPredmetis", new { StudentID = Model.PKStudentId })
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PKStudentId }) |

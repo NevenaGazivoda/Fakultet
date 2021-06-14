@@ -21,6 +21,12 @@ namespace FakultetAPI.Controllers
             return View(studentiPredmetis.ToList());
         }
 
+        public ActionResult OcjeneStudenta(int StudentID)
+        {
+            var studentiPredmetis = db.StudentiPredmetis.Where(k => k.FKStudentId == StudentID);
+            return PartialView(studentiPredmetis.ToList());
+        }
+
         // GET: StudentiPredmetis/Details/5
         public ActionResult Details(int? id)
         {

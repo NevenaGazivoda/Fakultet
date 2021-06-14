@@ -20,6 +20,11 @@ namespace FakultetAPI.Controllers
             var predmetis = db.Predmetis.Include(p => p.Profesori);
             return View(predmetis.ToList());
         }
+        public ActionResult PredmetiProfesora(int ProfesorID)
+        {
+            var predmetis = db.Predmetis.Where(p => p.FKProfesorId == ProfesorID);
+            return PartialView(predmetis.ToList());
+        }
 
         // GET: Predmetis/Details/5
         public ActionResult Details(int? id)

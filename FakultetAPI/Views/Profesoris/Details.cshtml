@@ -44,6 +44,9 @@
 
     </dl>
 </div>
+<div>
+    @Html.Action("PredmetiProfesora", "Predmetis", new { ProfesorID = Model.PKProfesorId })
+</div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PKProfesorId }) |
     @Html.ActionLink("Back to List", "Index")

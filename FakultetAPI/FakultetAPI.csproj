@@ -320,6 +320,8 @@
     <Content Include="Views\StudentiPredmetis\Details.cshtml" />
     <Content Include="Views\StudentiPredmetis\Edit.cshtml" />
     <Content Include="Views\StudentiPredmetis\Index.cshtml" />
+    <Content Include="Views\StudentiPredmetis\OcjeneStudenta.cshtml" />
+    <Content Include="Views\Predmetis\PredmetiProfesora.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<FakultetAPI.ModelEF.Predmeti>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Godina)
+        </th>
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Godina)
+        </td>
+        
+    </tr>
+}
+
+</table>
